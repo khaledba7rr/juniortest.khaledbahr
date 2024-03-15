@@ -87,9 +87,6 @@ function AddProduct(){
         });
     }
 
-    let handleChange = () => {
-    }
-
     return <>
             <div className="add-product-title">
                 <h2>add new product</h2>
@@ -102,7 +99,7 @@ function AddProduct(){
             }
         <div className="add-product-container">
 
-            <form id="product_form" onSubmit={addNewProduct} onChange={handleChange}>
+            <form id="product_form" onSubmit={addNewProduct} >
 
                 <div className="input-container">
                     <label htmlFor="sku" >SKU </label>
@@ -138,7 +135,7 @@ function AddProduct(){
 
                     <div className="input-container">
                         <label htmlFor="size" >Size(MB)</label>
-                        <input id="size" name="size" type="number" min="0" placeholder="Size (MB)" required={type === 'DVD-disc' ? true : false}/>
+                        <input id="size" name="size" type="number" min="0" placeholder="Size (MB)" required={type === 'dvd' ? true : false}/>
                     </div>
 
                 </div>
@@ -148,7 +145,7 @@ function AddProduct(){
 
                     <div className="input-container">
                         <label htmlFor="weight" >Weight(KG)</label>
-                        <input id="weight" name="weight" type="number" min="0" placeholder="Weight (KG)" required={type === 'Book' ? true : false} />
+                        <input id="weight" name="weight" type="number" min="0" placeholder="Weight (KG)" required={type === 'book' ? true : false} />
                     </div>
 
                 </div>
@@ -159,17 +156,17 @@ function AddProduct(){
 
                     <div className="input-container">
                         <label htmlFor="height" >Height (CM)</label>
-                        <input id="height" name="height" type="number" min="0" placeholder="Height (CM)" required={type === 'Furniture' ? true : false} />
+                        <input id="height" name="height" type="number" min="0" placeholder="Height (CM)" required={type === 'furniture' ? true : false} />
                     </div>
 
                     <div className="input-container">
                         <label htmlFor="width" >Width (CM)</label>
-                        <input id="width" name="width" type="number" min="0" placeholder="width (CM)" required={type === 'Furniture' ? true : false} />
+                        <input id="width" name="width" type="number" min="0" placeholder="width (CM)"  required={type === 'furniture' ? true : false} />
                     </div>
 
                     <div className="input-container">
                         <label htmlFor="length" >Length (CM)</label>
-                        <input id="length" name="length" type="number" min="0" placeholder="Length (CM)" required={type === 'Furniture' ? true : false}  />
+                        <input id="length" name="length" type="number" min="0" placeholder="Length (CM)" required={type === 'furniture' ? true : false}  />
                     </div>
                 </div>
 
